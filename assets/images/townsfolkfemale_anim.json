@@ -1,7 +1,7 @@
 {
     "anims": [
         {
-            "key": "idleanimation",
+            "key": "female_walk",
             "type": "frames",
             "repeat": -1,
             "frameRate": 12,
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "key": "walkanimation",
+            "key": "female_idle",
             "type": "frames",
             "repeat": -1,
             "frameRate": 12,

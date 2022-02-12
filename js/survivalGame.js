@@ -1,26 +1,28 @@
 import mainScene from "./mainScene.js";
+import inventoryScene from "./inventoryScene.js";
+import craftingScene from "./craftingScene.js";
 
 const config = {
-    width:1080,
+    width:512,
     height:512,
-    backgroundColor : '#333333',
+    backgroundColor : '#999999',
     type : Phaser.AUTO,
     parent : 'survivalGame',
-    scene : [mainScene],
+    scene : [mainScene,inventoryScene,craftingScene],
     scale : {
-        zoom:2,
+        zoom:1.5,
     },
     physics : {
         default : 'matter',
         matter :{
-            debug : true,
+            debug : false,
             gravity : {y:0},
         }
     },
     plugins : {
         scene : [
             {
-                plugin : PhaserMatterCollisionPlugin,
+                plugin : PhaserMatterCollisionPlugin.default,
                 key : 'matterCollision',
                 mapping : 'matterCollision'
             }

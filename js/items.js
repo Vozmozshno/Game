@@ -1,0 +1,26 @@
+let items = {
+    pickaxe : {frame:162,mats : ['wood','wood','stone']},
+    shovel : {frame:163,mats : ['wood','stone','stone']},
+    wood : {frame:272},
+    stone : {frame : 273},
+    bush : {frame : 228},
+    meat : {frame : 241},
+    fur : {frame :280},
+    health_potion : {frame:144},
+    wand_fire : {frame:105},
+    berry : {frame: 1},
+    berries : {frame : 228},
+    162 : {frame : 162,mats : ['wood','wood','stone']},
+    163 : {frame : 163,mats : ['wood','stone','stone']},
+    272 : {frame : 272,mats : ['stone']},
+    273 : {frame : 273},
+    228 : {frame : 228},
+    241 : {frame : 241},
+    280 : {frame : 280},
+    144 : {frame : 144},
+    105 : {frame : 105},
+    203 : {frame : 203},
+    201 : {frame : 201},
+    243 : {frame : 243}
+};
+export default items;
