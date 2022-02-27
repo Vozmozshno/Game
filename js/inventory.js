@@ -21,10 +21,11 @@ export default class inventory {
         this.observers.forEach(subscriber => subscriber())
     }
 
-//
+
     addItem(item){
+        console.log(item)
         let existingKey = Object.keys(this.items).find(key => this.items[key].name === item.name)
-        console.log('ite,',item.name)
+        console.log('item',item.name)
         console.log( existingKey )
         if(existingKey){
             this.items[existingKey].quantity += item.quantity
@@ -40,6 +41,7 @@ export default class inventory {
         this.broadcast()
     }
     getItem(index){
+        console.log(index)
         return this.items[index]
 
     }
@@ -57,6 +59,7 @@ export default class inventory {
     }
 
     getItemFrame(item){
+
         return items[item.name].frame
     }
 

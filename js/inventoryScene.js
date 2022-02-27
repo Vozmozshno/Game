@@ -40,8 +40,8 @@ export default class inventoryScene extends UIBaseScene {
 
             let item = this.inventory.getItem(index)
 
-            if(item) {
-                console.log('frame', items[item.name].frame)
+            if(item && item.name !== '') {
+                console.log('frame', item)
                 inventorySlot.item = this.add.sprite(inventorySlot.x, inventorySlot.y-this.tileSize/12, 'items' ,items[item.name].frame)
                 inventorySlot.quantityText = this.add.text(inventorySlot.x, inventorySlot.y + this.tileSize/6,item.quantity,{
                     font : '12px Courier',

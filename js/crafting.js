@@ -14,6 +14,7 @@ export default class crafring {
         let craftables = Object.keys(items).filter(i => items[i].mats)
         for (let index = 0; index < craftables.length; index++) {
             const itemName = craftables[index]
+            console.log(itemName)
             const mats = items[itemName].mats
             //Now chech if we have enough mats
             let lastMat = ""
@@ -22,8 +23,9 @@ export default class crafring {
             let qty = 0
             mats.forEach(mat => {
                 qty = (lastMat === mat) ? qty - 1 : this.inventory.getItemQuantity(mat)
+                console.log("qty",qty, mat)
                 let available = (qty > 0)
-                matDetails.push({name: mat, frame: items[mat].frame, available})
+                matDetails.push({name: mat.frame, frame: items[mat].frame, available})
                 lastMat = mat
                 if (!available) canCraft = false
             })

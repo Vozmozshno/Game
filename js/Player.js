@@ -83,6 +83,7 @@ export default class Player extends matterEntity{
             callback: other => {
                 if(other.gameObjectB && other.gameObjectB.pickup)
                     if(other.gameObjectB.pickup()){
+                        console.log(other.gameObjectB)
                         this.inventory.addItem({name:other.gameObjectB.name,quantity : 1})
                     }
             },
